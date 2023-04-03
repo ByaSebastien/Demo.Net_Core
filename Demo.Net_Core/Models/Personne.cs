@@ -18,5 +18,14 @@ namespace Demo.Net_Core.Models
         public string LastName { get; set; }
         public DateTime Date { get; set; }
         public Genres Genre { get; set; }
+
+        public static Personne operator +(Personne a, Personne b)
+        {
+            return new Personne()
+            {
+                FirstName = a.FirstName.Substring(0, 2) + b.FirstName.Substring(2, 2),
+                LastName = a.LastName.Substring(0, 2) + b.LastName.Substring(2, 2),
+            };
+        }
     }
 }
