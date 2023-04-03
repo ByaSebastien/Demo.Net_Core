@@ -13,7 +13,7 @@ namespace Demo.Net_Core.Models
         Autre
     }
     public class Personne
-    { 
+    {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Date { get; set; }
