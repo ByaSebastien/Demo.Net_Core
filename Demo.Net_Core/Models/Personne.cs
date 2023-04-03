@@ -27,5 +27,14 @@ namespace Demo.Net_Core.Models
                 LastName = a.LastName.Substring(0, 2) + b.LastName.Substring(2, 2),
             };
         }
+
+        public static bool operator ==(Personne a, Personne b)
+        {
+            return a.FirstName == b.FirstName;
+        }
+        public static bool operator !=(Personne a, Personne b)
+        {
+            return !(a == b);
+        }
     }
 }
